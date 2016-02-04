@@ -1,0 +1,16 @@
+<html>
+  <body>
+    <canvas id="myCanvas" width="800px"></canvas>
+    <script src="./dist/mnist.js"></script>
+    <script>
+      var context = document.getElementById('myCanvas').getContext('2d');
+      var digits = mnist.training.slice(0, 10);
+      for (var i = 0; i < digits.length; i++) {
+        var digit = digits[i].input;
+        var label = digits[i].label;
+        mnist.draw(digit, context, i * 30, 0);
+        console.log(label);
+      }
+    </script>
+    </body>
+</html>

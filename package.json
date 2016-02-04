@@ -1,0 +1,20 @@
+{
+  "name": "mnistjs",
+  "version": "0.0.1",
+  "description": "mnist data",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "browserify ./src/index.js > ./dist/mnist.js"
+  },
+  "keywords": [
+    "mnist",
+    "machine",
+    "learning",
+    "digits"
+  ],
+  "author": "Jed Borovik",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.0.0"
+  }
+}
