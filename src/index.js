@@ -5,7 +5,7 @@ var mnist = {
   draw: require('./draw'),
 };
 
-if (typeof modules !== 'undefined' && module.exports) {
+if (typeof module !== 'undefined' && module.exports) {
   module.exports = mnist;
 }
 if (typeof window === 'object') {
