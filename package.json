@@ -4,7 +4,7 @@
   "description": "mnist data",
   "main": "src/index.js",
   "scripts": {
-    "build": "browserify ./src/index.js > ./dist/mnist.js"
+    "build": "browserify ./src/index.js > ./dist/mnist.js && browserify ./src/small.js > ./dist/small.js"
   },
   "keywords": [
     "mnist",

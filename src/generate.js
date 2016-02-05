@@ -7,9 +7,14 @@ var testingLabels = fs.readFileSync(__dirname + '/data/t10k-labels-idx1-ubyte');
 
 var trainingFile = './training.json';
 var testingFile = './testing.json';
-
 var trainingSize = 60000;
 var testingSize = 10000;
+
+var smallTrainingFile = './small-training.json';
+var smallTestingFile = './small-testing.json';
+var smallTrainingSize = trainingSize / 100;
+var smallTestingSize = testingSize / 100;
+
 var threshold = 50;
 var imageSize = 20;
 
@@ -18,6 +23,12 @@ var testing = transform(testingData, testingLabels, testingSize);
 
 fs.writeFileSync(trainingFile, JSON.stringify(training));
 fs.writeFileSync(testingFile, JSON.stringify(testing));
+
+var smallTraining = training.slice(0, smallTrainingSize);
+var smallTesting = testing.slice(0, smallTestingSize);
+
+fs.writeFileSync(smallTrainingFile, JSON.stringify(smallTraining));
+fs.writeFileSync(smallTestingFile, JSON.stringify(smallTesting));
 
 /**
  * @param {Array} data
